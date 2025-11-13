@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弾幕ゲーム</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="ui-layer">
+            <div id="stage-select-screen" class="screen active">
+                <h1 class="title">SELECT STAGE</h1>
+                <div id="stage-buttons-container">
+                    <!-- Stage buttons will be dynamically inserted here -->
+                </div>
+            </div>
+            <div id="game-over-screen" class="screen">
+                <h2 class="subtitle">GAME OVER</h2>
+                <p class="score-text">SCORE: <span id="final-score">0</span></p>
+                <button id="restart-button" class="btn">STAGE SELECT</button>
+            </div>
+            <div id="win-screen" class="screen">
+                <h1 class="title">YOU WIN!</h1>
+                <p class="score-text">FINAL SCORE: <span id="win-score">0</span></p>
+                <button id="restart-button-win" class="btn">STAGE SELECT</button>
+            </div>
+            <div id="transition-screen" class="screen">
+                <h2 id="transition-text" class="subtitle"></h2>
+            </div>
+            <div id="in-game-ui" class="hidden">
+                <p class="score-text">SCORE: <span id="score">0</span></p>
+                <p id="stage-text" class="score-text">STAGE: 1</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
